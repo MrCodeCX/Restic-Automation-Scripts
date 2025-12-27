@@ -2,6 +2,8 @@
 
 Restic is a useful tool to manage system backups. This repository contains some useful bash scripts for automating and simplifying restic processes.
 
+---
+
 #### General Config
 
 Every scripts from this repository needs a **restic.env** file with the following structure:
