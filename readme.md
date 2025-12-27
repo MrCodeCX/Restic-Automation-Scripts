@@ -1,6 +1,6 @@
 #### Restic Useful Scripts
 
-This repository is to share a few useful bash scripts to automate and simplify the restic processes.
+Restic is a useful tool to manage system backups. This repository contains some useful bash scripts for automating and simplifying restic processes.
 
 #### General Config
 
