@@ -1,9 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
+# Manage Relative Paths to Script Dir
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Global Setup
-source cfg/restic.env
-source cfg/restore_cfg.bash
+source "${SCRIPT_DIR}/cfg/restic.env"
+source "${SCRIPT_DIR}/cfg/restore_cfg.bash"
 
 for restore_tag in "${RESTORE_CONFIG[@]}"; do
 

@@ -1,9 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+# Manage Relative Paths to Script Dir
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Global Setup
-source cfg/restic.env
-source cfg/backup_cfg.bash
+source "${SCRIPT_DIR}/cfg/restic.env"
+source "${SCRIPT_DIR}/cfg/backup_cfg.bash"
+
 cd "$BACKUP_ROOT" || exit 1
 
 for tag in "${!BACKUP_CONFIG[@]}"; do
